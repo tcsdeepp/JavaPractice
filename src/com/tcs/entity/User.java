@@ -21,6 +21,18 @@ public class User {
 	public void setMobileNumber(Long mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
+	
+	//custom constructor
+	public User(String name, Long mobileNumber, byte age) {
+	this(name,mobileNumber);
+		this.age = age;
+	}
+	//overloaded constructor
+	public User(String name, Long mobileNumber) {
+		super();//calling super class constructor
+		this.name = name;
+		this.mobileNumber = mobileNumber;
+	}
 	public byte getAge() {
 		return age;
 	}
