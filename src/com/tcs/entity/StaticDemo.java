@@ -1,0 +1,28 @@
+package com.tcs.entity;
+
+public class StaticDemo {
+	public static void main(String[] args) {
+		Bank bank = new Bank();
+		Bank.createNewAccountNumber();
+		System.out.println(Bank.createNewAccountNumber());
+		System.out.println(Bank.createNewAccountNumber());
+		System.out.println(bank.instanceVariable);
+	//	bank.createNewAccountNumber();//warning that object is used to call the static method. Use class name to call.
+		Bank bank1 = new Bank();
+		Bank.createNewAccountNumber();
+		System.out.println(bank1.createNewAccountNumber());
+		System.out.println(bank1.createNewAccountNumber());
+		System.out.println(bank1.instanceVariable);
+	}
+	
+
+}
+
+class Bank{
+	static int counter; //static variables belong to all the objects
+	int instanceVariable=10;//instance variable 
+	
+	public static int createNewAccountNumber() {
+		return ++counter;
+	}
+}

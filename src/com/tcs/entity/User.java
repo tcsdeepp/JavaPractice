@@ -3,7 +3,9 @@ package com.tcs.entity;
 public class User {
 	private String name;
 	private Long mobileNumber;
-	private byte age;
+	//beginner  , intermediate, expert
+	private ROLE role;
+	private byte age; // data encapsulation
 	
 	
 	public void workout() {
