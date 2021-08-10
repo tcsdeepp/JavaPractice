@@ -21,4 +21,7 @@ class Employee1 extends User1{  //IS-A relationship = inheritance, //subclass
 	public void work() {
 		System.out.println("Employee is working");
 	}
+
+	public void work(boolean duration) {   //overloading
+		System.out.println("Employee is working");
 }
