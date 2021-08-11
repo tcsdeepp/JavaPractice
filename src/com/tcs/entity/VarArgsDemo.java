@@ -6,7 +6,7 @@ public class VarArgsDemo {
 		Student student = new Student(subjects);
 		System.out.println(student.subjects[0]);
 		
-		Student student1 = new Student(subjects);
+		Student student1 = new Student("Science");
 		System.out.println(student1.subjects[0]);
 		
 		
