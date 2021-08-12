@@ -17,7 +17,8 @@ public class ArrayListDemo {
 		// TODO Auto-generated method stub
 		numbers.remove(11);
 		numbers.add(50);//adds at the end
-		numbers.add(1,50);
+
+		numbers.add(1,50); // adds at a specific index
 		System.out.println(numbers);
 		
 	}
