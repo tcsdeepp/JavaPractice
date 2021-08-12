@@ -3,17 +3,33 @@ package com.tcs.listdemo;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class ArrayListDemo {
 	public static void main(String[] args) {
 		List<Integer> numbers = createList();
-		filterList(numbers);
+		//filterList(numbers);
+		//add(numbers);
+		otherOps(numbers);
+	}
+	private static void otherOps(List<Integer> numbers) {
+		// TODO Auto-generated method stub
+		numbers.remove(11);
+		numbers.add(50);//adds at the end
+		numbers.add(1,50);
+		System.out.println(numbers);
+		
 	}
 	/**
 	 * Method to Filter the elements
 	 * @param numbers
 	 */
+	private static void add(List<Integer> numbers) {
+		Optional<Integer> sum1=numbers.stream().reduce((Integer sum, Integer number )->{ System.out.println(sum+", "+number);return sum+number;});
+		System.out.println(sum1.get());
+	}
+	
 	private static void filterList(List<Integer>numbers) {
 		// TODO Auto-generated method stub
 		numbers.forEach((number) -> {
