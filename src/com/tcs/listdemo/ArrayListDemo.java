@@ -7,17 +7,22 @@ import java.util.List;
 public class ArrayListDemo {
 	public static void main(String[] args) {
 		List<Integer> numbers = createList();
-		System.out.println(numbers);
-		numbers.sort(new Comparator<Integer>() { // oomparator to do sorting in Ascending or Descending
-			@Override
-			public int compare(Integer o1, Integer o2) {
-				return o1 - o2;// For Ascending
-			//	return o2 - o1; //For descending
-			}
-
-		});
-		System.out.println("After Sorting=" +numbers);
+		filterList(numbers);
 	}
+	/**
+	 * Method to Filter the elements
+	 * @param numbers
+	 */
+	private static void filterList(List<Integer>numbers) {
+		// TODO Auto-generated method stub
+		numbers.forEach((number) -> {
+			System.out.println(number % 2 ==0);
+			//break;
+		});
+		List<Integer> filtered = numbers.stream().filter((number)->number % 2==0).collect(Collectors.toList()); //lambda function
+		System.out.println(filtered);
+	}
+	
 
 	private static List<Integer> createList() {
 		// TODO Auto-generated method stub
